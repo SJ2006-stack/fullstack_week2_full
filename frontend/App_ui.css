@@ -1,0 +1,138 @@
+.App {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  min-height: 100vh;
+  padding: 0;
+  text-align: center;
+}
+
+/* Top bar */
+.topbar {
+  background: #333;
+  color: #fff;
+  padding: 16px 0;
+  position: relative;
+}
+
+/* Main heading */
+.main-heading {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Login/Register buttons at top right */
+.top-btns {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+.btns button, .input-row button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 3px;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+button.close {
+  background: none;
+  color: #333;
+  font-size: 1rem;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  background: rgba(0,0,0,0.1);
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-box {
+  background: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  min-width: 180px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+input {
+  padding: 6px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+/* Chat area */
+.chat-area {
+  margin: 24px auto 0 auto;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 12px;
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+.messages {
+  min-height: 30px;
+  margin-bottom: 8px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.message {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 80%;
+}
+.sent { background: #d2ffd2; margin-left: auto; }
+.received { background: #eee; margin-right: auto; }
+.input-row {
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+}
+.input-row input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+.backend-msg {
+  color: #b00;
+  background: #ffdede;
+  border-radius: 3px;
+  padding: 5px 8px;
+  margin: 10px 0 0 0;
+  font-size: 0.95rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .chat-area {
+    max-width: 98vw;
+    padding: 6px 1px;
+  }
+  .main-heading {
+    font-size: 1.1rem;
+  }
+  .top-btns {
+    right: 2px;
+  }
+}
